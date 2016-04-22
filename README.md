@@ -17,7 +17,7 @@ fisher last_job_id
 
 ```fish
 if set -l i (last_job_id --last)
-    printf "Most recent job: %%%i\n" i
+    printf "Most recent job: %%%i\n" $i
 end
 ```
 
