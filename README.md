@@ -3,7 +3,7 @@
 
 # last_job_id
 
-Get the id of the last job to be started.
+Get the id of one or more existing jobs
 
 ## Install
 
@@ -16,8 +16,8 @@ fisher last_job_id
 ## Usage
 
 ```fish
-if set -l job_id (last_job_id)
-    printf "The last job to be started: %%%i\n" $job_id
+if set -l i (last_job_id --last)
+    printf "Most recent job: %%%i\n" i
 end
 ```
 
