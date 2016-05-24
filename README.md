@@ -1,7 +1,7 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-# last_job_id
+# Last_job_id
 
 Get the id of one or more existing jobs
 
