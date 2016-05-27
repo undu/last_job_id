@@ -1,15 +1,14 @@
 function last_job_id -d "Get the id of one or more existing jobs"
-    jobs $argv | awk -v FS=\t '
+    builtin jobs $argv | command awk -v FS=\t '
         /[0-9]+\t/{
-            jobs[++job_count] = $1
+            aJobs[++nJobs] = $1
         }
-
         END {
-            for (i = 1; i <= job_count; i++) {
-                print(jobs[i])
+            for (i = 1; i <= nJobs; i++) {
+                print(aJobs[i])
             }
 
-            exit job_count == 0
+            exit nJobs == 0
         }
     '
 end
